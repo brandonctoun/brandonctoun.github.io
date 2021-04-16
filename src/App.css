@@ -114,56 +114,71 @@ h1, h2, h3, h4, p {
 }
 
 .active {
-  font-weight: bolder;
+  background: -webkit-linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(252, 69, 91, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(-1px -1px #333);
+}
+.active a:hover{
+  text-shadow: none !important;
 }
 
 .skills ul li {
   list-style-type: none;
 }
 
+
 /*----------------------------------------------*/
+
 /*	Skill Bars
 /*----------------------------------------------*/
 
 .bars {
-	width: 95%;
-	float: left;
-	padding: 0;
-	text-align: left;
+  max-width: 500px;
+  width: 95%;
+  float: left;
+  padding: 0;
+  text-align: left;
   margin: 10px 10px 30px 10px !important;
 }
-.bars .skills {
-  	margin-top: 36px;
-   list-style: none;
-}
-.bars li {
-   position: relative;
-  	margin-bottom: 60px;
-  	background: #ccc;
-  	height: 42px;
-  	border-radius: 3px;
-}
-.bars li em {
-	font: 15px 'opensans-bold', sans-serif;
-   color: #313131;
-	text-transform: uppercase;
-   letter-spacing: 2px;
-	font-weight: normal;
-   position: relative;
-	top: -36px;
-}
-.bar-expand {
-   position: absolute;
-   left: 0;
-   top: 0;
 
-   margin: 0;
-   padding-right: 24px;
-  	background: #313131;
-   display: inline-block;
-  	height: 42px;
-   line-height: 42px;
-   border-radius: 3px 0 0 3px;
+.bars .skills {
+  margin-top: 36px;
+  list-style: none;
+}
+
+.bars li {
+  position: relative;
+  margin-bottom: 60px;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 141, 29, 1) 50%, rgba(252, 69, 91, 1) 100%);
+  height: 42px;
+  border-radius: 3px;
+}
+
+.bars li em {
+  font: 15px 'opensans-bold', sans-serif;
+  color: #313131;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: normal;
+  position: relative;
+  top: -36px;
+}
+
+.bar-expand {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0;
+  background: #313131;
+  display: inline-block;
+  height: 42px;
+  line-height: 42px;
+}
+
+nav ul li a:hover {
+    text-shadow: 1px 1px black;
 }
 
 @media only screen and (max-width: 767px) {

@@ -7,7 +7,7 @@ class Experience extends Component {
       <div className="condiv">
         <h1 className="subtopic">My Experience</h1>
         <Widecard title="Software Engineer" where="Connectwise, Tampa, FL" from="February 2017" to="August 2020" >
-          <ul style={{marginLeft: 32}}>
+          <ul style={{marginLeft: 32, padding:5}}>
             <li>
               Led a project team for a small web application to assist in customer onboarding for the Connectwise
               Manage product

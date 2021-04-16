@@ -5,37 +5,37 @@ const Skills = () => {
   const skillData = [
     {
       "name": "ReactJs",
-      "level": "90%"
+      "level": 90
     },
     {
       "name": "CSS",
-      "level": "70%"
+      "level": 75
     },
     {
       "name": "HTML5",
-      "level": "70%"
+      "level": 70
     },
     {
       "name": "Git",
-      "level": "80%"
+      "level": 80
     },
     {
       "name": "T-SQL",
-      "level": "60%"
+      "level": 65
     },
     {
       "name": "C#",
-      "level": "50%"
+      "level": 50
     },
     {
       "name": ".NET",
-      "level": "50%"
+      "level": 50
     }
   ];
 
   const skills = skillData.map((skills) => {
     const className = 'bar-expand ' + skills.name.toLowerCase();
-    return <li key={skills.name}><span style={{ width: skills.level }} className={className}></span><em>{skills.name}</em></li>
+    return <li key={skills.name}><span style={{ width: `${100-skills.level}%` }} className={className}></span><em>{skills.name}</em></li>
   })
 
   return (

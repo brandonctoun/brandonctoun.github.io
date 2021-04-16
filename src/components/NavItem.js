@@ -17,10 +17,16 @@ class Navitem extends Component {
     return routes[route];
   }
 
+  isActive = () => {
+    if (this.props.item === this.getActiveNavItem(this.props.currentRoute)) {
+      return true;
+    }
+  }
+
   render() {
     return (
-      <li id={this.props.item} className={this.props.item === this.getActiveNavItem(this.props.currentRoute) ? 'active' : null}>
-        <Link to={this.props.tolink} >{this.props.item}</Link>
+      <li id={this.props.item} className={isActive() ? 'active' : null}>
+        <Link to={this.props.tolink} disabled={this.isActive()}>{this.props.item}</Link>
       </li>
     )
   }
