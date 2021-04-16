@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-class Navitem extends Component {
 
-  handleClick = () => {
-    this.props.activec(this.props.item);
-  }
+const Navitem = (props) => {
 
-  getActiveNavItem = (route) => {
+  const getActiveNavItem = (route) => {
     const routes = {
       '/': "Home",
       '/about': "About",
@@ -17,18 +14,16 @@ class Navitem extends Component {
     return routes[route];
   }
 
-  isActive = () => {
-    if (this.props.item === this.getActiveNavItem(this.props.currentRoute)) {
+  const isActive = () => {
+    if (props.item === getActiveNavItem(props.currentRoute)) {
       return true;
     }
   }
 
-  render() {
     return (
-      <li id={this.props.item} className={isActive() ? 'active' : null}>
-        <Link to={this.props.tolink} disabled={this.isActive()}>{this.props.item}</Link>
+      <li id={props.item} className={isActive() ? 'active' : null}>
+        <Link to={props.tolink} disabled={isActive()}>{props.item}</Link>
       </li>
     )
-  }
 }
 export default Navitem

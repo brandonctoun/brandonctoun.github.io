@@ -105,22 +105,27 @@ h1, h2, h3, h4, p {
   border: 0px solid #9a9b9c;
   display: flex;
   margin: 30px 0px 30px 0px;
+  padding: .75em 0;
 }
 
 .widecard:hover {
   color: #1b1d20;
   background-color: #ffffff;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 8px;
 }
 
 .active {
-  background: -webkit-linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(252, 69, 91, 1) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(-1px -1px #333);
+  cursor: default;
 }
+
+.active a {
+  color: rgba(253, 141, 29, 1);
+}
+
 .active a:hover{
   text-shadow: none !important;
+  cursor: default;
 }
 
 .skills ul li {
